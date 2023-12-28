@@ -10,11 +10,11 @@ navegador = webdriver.Chrome()
 navegador.get("https://cadastro-produtos-devaprender.netlify.app/index.html")
 sleep(5)
 
-# Entrar na panilha
+# Entrar na panilha.
 workbook = openpyxl.load_workbook('produtos_ficticios.xlsx')
 sheet_produtos = workbook['Produtos']
 0.94
-# Copiar informações de um campo e colar no seu campo correspondenteÚltima moda da estação.
+# Copiar informações de um campo e colar no seu campo correspondente.
 for linha in sheet_produtos.iter_rows(min_row=2):
    nome_produto = linha[0].value
    pyperclip.copy(nome_produto)
@@ -46,7 +46,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
    navegador.find_element('xpath', '//*[@id="dimensions"]').click()
    pyautogui.hotkey('ctrl','v')
    
-   # Prox pág
+   # Próxima página.
    navegador.find_element('xpath', '/html/body/div/form/div[7]/button[1]').click()
    sleep(1)
    
@@ -84,7 +84,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
    navegador.find_element('xpath', '//*[@id="material"]').click()
    pyautogui.hotkey('ctrl','v')
    
-   # Prox pág
+   # Próxima página
    navegador.find_element('xpath', '/html/body/div/form/div[7]/button[1]').click()
    sleep(1)
    
@@ -113,13 +113,13 @@ for linha in sheet_produtos.iter_rows(min_row=2):
    navegador.find_element('xpath', '//*[@id="warehouse_location"]').click()
    pyautogui.hotkey('ctrl','v')
    
-   # Concluir
+   # Botão concluir.
    navegador.find_element('xpath', '/html/body/div/form/div[6]/button[1]').click()
    sleep(1)
    
-   # Modal OK
+   # Modal OK.
    pyautogui.click(713,184,duration=0.5)
    
-   # Adicionar mais um
+   # Adicionar mais.
    navegador.find_element('xpath', '/html/body/div/div/button').click()
    sleep(1)
