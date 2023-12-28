@@ -84,7 +84,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
    navegador.find_element('xpath', '//*[@id="material"]').click()
    pyautogui.hotkey('ctrl','v')
    
-   # Próxima página
+   # Próxima página.
    navegador.find_element('xpath', '/html/body/div/form/div[7]/button[1]').click()
    sleep(1)
    
